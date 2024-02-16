@@ -1,0 +1,350 @@
+@import url("../reset.css");
+@font-face {
+  font-family: "pro";
+  src: url("../font/GTPressuraMono.ttf") format("truetype");
+}
+@font-face {
+  font-family: "pro2";
+  src: url("../font/NeuePlak-CondBold.ttf") format("truetype");
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap");
+$--textcolor: #e8e8e8;
+@keyframes left {
+  0% {
+    left: 0;
+    bottom: 75%;
+    opacity: 0;
+  }
+  100% {
+    left: 100%;
+    bottom: 75%;
+    opacity: 1;
+  }
+}
+@keyframes left2 {
+  0% {
+    left: 0;
+    bottom: 25%;
+    opacity: 0;
+  }
+  100% {
+    left: 100%;
+    bottom: 25%;
+    opacity: 1;
+  }
+}
+@keyframes right {
+  0% {
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    right: 100%;
+    opacity: 1;
+  }
+}
+@keyframes right2 {
+  0% {
+    right: 0;
+    bottom: 50%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    right: 100%;
+    bottom: 50%;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    figure {
+      & .inner {
+        width: 80% !important;
+        left: 10px !important;
+        bottom: -270px !important;
+        margin: 0 !important;
+        h2 {
+          font-size: 50px !important;
+        }
+        p {
+          font-size: 14px !important;
+        }
+      }
+    }
+    section {
+      height: 300vh !important;
+      h1 {
+        font-size: 70px !important;
+      }
+      .main-title {
+        // grid-template-columns : repeat(1, 100px) !important;
+        justify-content: center !important;
+        margin-left: 350px;
+
+        video {
+          width: 350px !important;
+          height: 400px !important;
+        }
+        div {
+          width: 100px;
+
+          p {
+            text-shadow: 0 0 15px #000;
+            width: 300px !important;
+            height: 30px !important;
+            font-size: 16px !important;
+            padding: 0 !important;
+          }
+        }
+        .tank1 {
+          margin-left: 20px;
+          video {
+            object-fit: cover;
+            border-radius: 0 !important;
+          }
+        }
+        .tank2 {
+          margin-left: -120px;
+          video {
+            object-fit: cover;
+            border-radius: 0 !important;
+          }
+        }
+      }
+      .sub1 {
+        margin-top: 580px;
+        margin-left: -100px !important;
+      }
+      .sub2 {
+        margin-top: 550px;
+        margin-left: 40px !important;
+      }
+      .tank3 {
+        margin-left: 20px;
+        video {
+          object-fit: cover;
+          border-radius: 0 !important;
+        }
+      }
+
+      .sub3 {
+        margin-top: 500px;
+        margin-right: 600px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  figure {
+    & .inner {
+      width: 80% !important;
+      left: 10px !important;
+      bottom: -300px !important;
+      margin: 0 !important;
+      h2 {
+        font-size: 100px !important;
+      }
+      p {
+        font-size: 20px !important;
+      }
+    }
+  }
+  section {
+    height: 220vh !important;
+    .main-title {
+      video {
+        width: 380px !important;
+      }
+      div {
+        p {
+          width: 300px !important;
+          height: 30px !important;
+          font-size: 14px !important;
+          padding: 0 !important;
+        }
+      }
+      .tank1 {
+        margin-left: 0px;
+      }
+      .tank2 {
+        margin-left: 0px;
+      }
+      .sub1 {
+        margin-left: 0px !important;
+      }
+      .sub2 {
+        margin-left: 0px !important;
+      }
+      .tank3 {
+        margin-left: 0px !important;
+      }
+      .sub3 {
+        margin-left: 0px !important;
+      }
+    }
+  }
+}
+
+body {
+  font-family: pro2;
+  height: 200vh;
+  figure {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 250px;
+    & video {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+    & .inner {
+      position: relative;
+      width: 1180px;
+      margin: 20% 0 0 0;
+      left: 50px;
+      bottom: 50px;
+      h2 {
+        font: normal 100px/1 "pro2";
+        color: skyblue;
+
+        margin-bottom: 20px;
+      }
+      p {
+        font: normal 32px/1.4 "Noto Sans KR";
+        color: $--textcolor;
+
+        font-family: "Noto Sans KR", sans-serif;
+      }
+    }
+  }
+  section {
+    height: 200vh;
+    background: url("../img/2.hobby/3.fish/bg4.jpg") center/cover no-repeat;
+    h1 {
+      font-size: 100px;
+      color: $--textcolor;
+      text-align: center;
+      padding: 100px;
+    }
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .main-title {
+        width: 100%;
+        grid-template-areas:
+          "t1 sub1"
+          "sub t2"
+          "t3 sub3";
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+        video {
+          width: 280px;
+          height: 500px;
+          border-radius: 323px 423px 100px 213px / 167px 197px 161px 164px;
+        }
+
+        p {
+          font-family: "Noto Sans KR", sans-serif;
+          font-size: 32px;
+          color: $--textcolor;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          width: 500px;
+          height: 500px;
+          text-shadow: 0 0 15px #000;
+        }
+        .tank1 {
+          grid-area: "t1";
+          order: 1;
+        }
+        .sub1 {
+          margin-left: -400px;
+          order: 2;
+          grid-area: "sub1";
+        }
+        .tank2 {
+          order: 4;
+          grid-area: "t2";
+          video {
+            width: 500px;
+            height: 500px;
+            border-radius: 500px 238px 427px 235px / 265px 347px 187px 376px;
+          }
+        }
+        .sub2 {
+          margin-left: 300px;
+          order: 3;
+          grid-area: "sub2";
+        }
+        .tank3 {
+          grid-area: "t3";
+          order: 5;
+          video {
+            width: 700px;
+            height: 500px;
+            border-radius: 420px 344px 365px 297px / 88px 122px 500px 465px;
+          }
+        }
+        .sub3 {
+          margin-left: -100px;
+          grid-area: "sub3";
+          order: 6;
+        }
+      }
+    }
+  }
+}
+
+.animation {
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  img {
+    float: left;
+    opacity: 1;
+    width: 80px;
+    height: 50px;
+  }
+  .fish {
+    position: absolute;
+    left: 0;
+    animation: left 3s linear infinite;
+    bottom: 50%;
+    opacity: 0;
+  }
+  .wave {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    animation: right 3s linear infinite;
+  }
+  .fish2 {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    animation: right2 3s linear infinite;
+    animation-delay: 0.5s;
+  }
+  .wave2 {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    animation: left2 3s linear infinite;
+    animation-delay: 0.5s;
+  }
+}

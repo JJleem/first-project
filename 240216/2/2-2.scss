@@ -1,0 +1,354 @@
+@import url("../reset.css");
+@font-face {
+  font-family: "pro";
+  src: url("../font/GTPressuraMono.ttf") format("truetype");
+}
+@font-face {
+  font-family: "pro2";
+  src: url("../font/NeuePlak-CondBold.ttf") format("truetype");
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap");
+$--textcolor: #e8e8e8;
+
+@keyframes cre {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+@media (max-width: 767px) {
+body {
+height: 100vh !important;
+  figure {
+    & .inner {
+        width: 80% !important;
+        left: 10px !important;
+        bottom: -270px !important;
+        margin: 0 !important;
+        h2 {
+            font-size: 50px !important;
+        }
+        p {
+            font-size: 14px !important;
+        }
+    }
+    }
+    section {
+      
+      height: 350vh !important;
+      h1{
+        padding-top: 100px;
+        font-size: 60px !important;
+        line-height: 60px;
+       
+      }
+      .content {
+        
+        overflow: visible !important;
+        .project-inner{
+          height: 200vh !important;
+          overflow: hidden !important;
+          .tabs {
+           
+            margin-top: 100px;
+            display: flex !important;
+          flex-direction: column !important;
+            overflow: visible !important;
+          height: 200% !important;
+            .tab {
+              height: 7% !important;
+             & div {
+              
+              
+              width: 100% !important;
+              clear: both !important;
+             }
+              .crephoto {
+                padding-top: 50px !important;
+                
+                width: 100% !important;
+                height: 100% !important;
+                position: absolute;
+               img {
+                width: 200px !important;
+                height: 200px !important;
+                float: right;
+                margin-bottom: 1000px !important;
+               }
+              }
+            }
+          }
+        }
+      }
+      .btn {
+        display: none;
+      }
+      .project-info {
+        width: 100% !important;
+        text-align: center;
+        padding-top: 80px !important;
+        h3 {
+
+          font-size: 50px !important;
+          text-align: center !important;
+        }
+        ul {
+          
+          display: none;
+        }
+      }
+    }
+  }
+  footer {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  figure {
+    & .inner {
+        width: 80% !important;
+        left: 10px !important;
+        bottom: -300px !important;
+        margin: 0 !important;
+        h2 {
+            font-size: 100px !important;
+        }
+        p {
+            font-size: 20px !important;
+        }
+    }
+    }
+    section {
+      height: 140vh !important;
+      
+      .content {
+        
+        
+        .project-inner{
+         
+          .tabs {
+           
+          
+          
+            .tab {
+              .crephoto {
+             
+               
+               img {
+                margin-left: -80px;
+                width: 380px !important;
+               height: 550px !important;
+                
+               }
+              }
+            }
+          }
+        }
+      }
+      .btn {
+        bottom: 10% !important;
+        transform: translate(-50%, -50%) !important;
+      }
+      .project-info {
+       
+        h3 {
+          width: 100% !important;
+         font-size: 50px !important;
+         
+        }
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+  footer {
+    display: none ;
+  }
+
+
+
+
+
+
+
+
+input[id="tab1"]:checked ~ .btn label[for="tab1"]::before,
+input[id="tab2"]:checked ~ .btn label[for="tab2"]::before,
+input[id="tab3"]:checked ~ .btn label[for="tab3"]::before,
+input[id="tab4"]:checked ~ .btn label[for="tab4"]::before {
+  border: 1px solid #aaa;
+}
+input[id="tab1"]:checked ~ .tabs {
+  margin-left: 0;
+}
+input[id="tab2"]:checked ~ .tabs {
+  margin-left: -100%;
+}
+input[id="tab3"]:checked ~ .tabs {
+  margin-left: -200%;
+}
+input[id="tab4"]:checked ~ .tabs {
+  margin-left: -300%;
+}
+
+body {
+  font-family: pro2;
+  height: 100%;
+  figure {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 250px;
+    & video {
+      width: 100%;
+      height: 100%;
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+    & .inner {
+      position: relative;
+      width: 1180px;
+      margin: 20% 0 0 0;
+      left: 50px;
+      bottom: 50px;
+      h2 {
+        font: normal 100px/1 "pro2";
+        color: yellowgreen;
+        text-shadow: 0 0 20px #000;
+        margin-bottom: 20px;
+      }
+      p {
+        font: normal 32px/1.4 "Noto Sans KR";
+        color: $--textcolor;
+        text-shadow: 0 0 15px #000;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+    }
+  }
+  section {
+    background: url("../img/2.hobby/2.reaptile/bg.JPG") center/cover no-repeat;
+    width: 100%;
+    height: 150vh ;
+    h1 {
+      font-size: 100px;
+      color: yellowgreen;
+      text-shadow: 0 0 15px #000;
+      text-align: center;
+      padding: 100px;
+    }
+    .content {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      .project-inner {
+        height: 100%;
+        overflow: hidden;
+        input[name="tabmenu"] {
+          display: none;
+        }
+        .tabs {
+          width: 700%;
+          height: 100%;
+          overflow: hidden;
+          transition: all 0.5s;
+          .tab {
+            float: left;
+            width: 7.14%;
+            height: 90%;
+            // overflow: hidden;
+            & div {
+              float: left;
+              height: 100%;
+              transition: all 0.3s;
+            }
+            .crephoto {
+              width: 70%;
+              height: 100%;
+
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 0);
+      width: 25%;
+      text-align: center;
+      label {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: brown;
+        border-radius: 100%;
+        margin: 8px;
+        cursor: pointer;
+        position: relative;
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          border: 1px solid transparentd;
+          border-radius: 100%;
+          position: absolute;
+          top: -6px;
+          left: -6px;
+          transition: all 0.3s;
+        }
+        &:hover::before {
+          border: 1px solid #e8e8e8;
+        }
+      }
+    }
+    .project-info {
+      width: 30%;
+      padding: 50px;
+      position: relative;
+      color: $--textcolor;
+      text-shadow: 0 0 15px black;
+      h3 {
+        font-size: 80px;
+        position: relative;
+      }
+      ul {
+        font-size: 20px;
+        margin-bottom: 30px;
+        line-height: 2rem;
+      }
+    }
+  }
+//   footer {
+//     section {
+//       width: 100%;
+//       height: 100%;
+//       background: url("../img/2.hobby/2.reaptile/bg.JPG") no-repeat center/cover;
+//       text-align: center;
+// z-index: 1;
+//       img {
+//         line-height: 300px;
+//         width: 200px;
+//         height: 200px;
+//         animation: cre linear 3s infinite;
+//       }
+//     }
+//   }
+}

@@ -1,0 +1,138 @@
+@import url("./reset.css");
+@font-face {
+  font-family: "pro";
+  src: url("./font/GTPressuraMono.ttf") format("truetype");
+}
+@font-face {
+  font-family: "pro2";
+  src: url("./font/NeuePlak-CondBold.ttf") format("truetype");
+}
+$--textcolor: #e8e8e8;
+
+@keyframes btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 100px;
+  }
+}
+@keyframes slidetwo {
+  0% {
+    top: 400px;
+    opacity: 0;
+  }
+  100% {
+    top: 250px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  // @keyframes slide {
+  //   0% {
+  //     top: -100px;
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     top: 50px !important;
+  //   }
+  // }
+  // @keyframes slidetwo {
+  //   0% {
+  //     top: 400px;
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     top: 150px !;
+  //     opacity: 1;
+  //   }
+  // }
+  body {
+    #wrap {
+      div {
+        font-size: 80px !important;
+      }
+      div:first-child {
+        top: 50px !important;
+      }
+      div:nth-child(2) {
+        top: 150px !important;
+      }
+      div:nth-child(3) {
+        font-size: 50px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    height: 100%;
+  }
+}
+
+body {
+  font-family: pro2;
+  height: 100vh;
+  color: $--textcolor;
+  margin: 0 auto;
+  background: url("./img/visual\ basic3.png") center/cover no-repeat;
+
+  #wrap {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 80px;
+    div {
+      font-size: 100px;
+    }
+    div:first-child {
+      position: absolute;
+      top: 100px;
+      animation: slide linear 1s;
+    }
+
+    div:nth-child(2) {
+      position: absolute;
+      top: 250px;
+      animation: slidetwo linear 1s;
+    }
+    div:nth-child(3) {
+      font-size: 50px;
+      margin-top: 6%;
+      animation: btn linear 1s;
+    }
+    div:last-child {
+      font-size: 50px;
+      margin-top: 10%;
+    }
+    .button {
+      height: 60px;
+      width: 150px;
+      background: transparent;
+      position: relative;
+      &:hover {
+        animation: btn linear 0.9s infinite;
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 60px;
+      }
+    }
+  }
+}
